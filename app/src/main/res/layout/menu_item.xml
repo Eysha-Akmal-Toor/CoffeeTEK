@@ -1,0 +1,39 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <!-- Image on the left -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <!-- Text in the center -->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:layout_marginTop="9dp"
+        android:textSize="18sp"
+        android:textColor="#56423C"
+        android:fontFamily="@font/raleway_bold" />
+
+    <!-- Right Arrow Icon -->
+    <ImageView
+        android:id="@+id/right_arrow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_arrow_right"
+        android:contentDescription="@string/title_Next"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

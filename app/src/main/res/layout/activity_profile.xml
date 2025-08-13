@@ -1,0 +1,217 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+        <!-- Back Arrow Image -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/title_Back"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="7dp"
+            android:onClick="onBackArrowClick" />
+
+        <!-- Centered Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="-10dp"
+            android:text="@string/profile"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Line under the top section -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey" />
+
+    <!-- Centered Content Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <!-- Image with Circular Background -->
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/circular_background"
+            android:gravity="center">
+
+            <!-- Image View inside FrameLayout -->
+            <TextView
+                android:id="@+id/profileInitial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-bold"/>
+        </FrameLayout>
+
+
+        <!-- Full Name Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:hint="hint_YourName"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/mustard"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSignInName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHint="@color/darkGrey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:hint="@string/hint_YourEmail"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/mustard"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSignInEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHint="@color/darkGrey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Number Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PhonenoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_YourPhoneNumber"
+            android:textColorHint="@color/grey"
+            android:gravity="center_horizontal"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/mustard"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSignInPhoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                app:hintTextColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHint="@color/darkGrey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- City Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/CityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_YourCity"
+            android:gravity="center_horizontal"
+            android:textColorHint="@color/grey"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/mustard"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSignInCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:textColorHint="@color/darkGrey" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/hint_YourPassword"
+            android:gravity="center_horizontal"
+            android:textColorHint="@color/grey"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundMode="filled"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/mustard"
+            app:hintTextColor="@color/black"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSignInPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkGrey"
+                android:textCursorDrawable="@drawable/cursor_color"
+                app:hintTextColor="@color/black"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

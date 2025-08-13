@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Top section with Back arrow and Heading -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+
+        <!-- Centered Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/title_Location"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Horizontal Line under the top section -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey" />
+
+    <!-- Google Map Section -->
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:layout_marginBottom="10dp">
+
+        <!-- Map Fragment Placeholder -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:layout_marginBottom="10dp" />
+    </FrameLayout>
+
+    <!-- Bold Text under Fragment -->
+    <TextView
+        android:id="@+id/bold_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_CoffeeTEK"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/darkBrown" />
+
+    <!-- Two ImageViews with Text on the Right -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp">
+
+        <!-- First Image and Text -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/nearby_icon1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/distance"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_distance"
+                android:textSize="16sp"
+                android:textColor="@color/darkGrey" />
+
+        <!-- Second Image and Text -->
+
+            <ImageView
+                android:id="@+id/nearby_icon2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/clock"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_time"
+                android:textSize="16sp"
+                android:textColor="@color/darkGrey" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Three TextViews with One ImageView aligned -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp">
+
+        <!-- Text Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_address"
+                android:textSize="16sp"
+                android:textColor="@color/darkBrown"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/raleway_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_address1"
+                android:textSize="16sp"
+                android:textColor="@color/darkGrey"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_address2"
+                android:textSize="16sp"
+                android:textColor="@color/darkGrey" />
+        </LinearLayout>
+
+        <!-- Image Section -->
+        <ImageView
+            android:id="@+id/emailButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mail"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="30dp" />
+    </LinearLayout>
+
+    <!-- Custom ListView Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <!-- Add your ListView or RecyclerView here -->
+    </LinearLayout>
+
+    <!-- Horizontal Line above the bottom menu bar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightGrey" />
+
+    <!-- Cursor View to move along with selected icon -->
+    <View
+        android:id="@+id/cursor"
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="200dp"
+        android:background="@color/darkBrown" />
+
+    <!-- Bottom Menu Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <!-- First Icon -->
+        <ImageView
+            android:id="@+id/menu_icon1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_light"
+            android:layout_gravity="center" />
+
+        <!-- Second Icon -->
+        <ImageView
+            android:id="@+id/menu_icon2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/coffee_light"
+            android:layout_gravity="center" />
+
+        <!-- Third Icon -->
+        <ImageView
+            android:id="@+id/menu_icon3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/location_light"
+            android:layout_gravity="center" />
+
+        <!-- Fourth Icon -->
+        <ImageView
+            android:id="@+id/menu_icon4"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/user_light"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</LinearLayout>

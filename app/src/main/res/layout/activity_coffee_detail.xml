@@ -1,0 +1,369 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top section with Back arrow and Heading -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Arrow Image -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/title_Back"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="7dp"
+            android:onClick="onBackArrowClick" />
+
+        <!-- Centered Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="-10dp"
+            android:text="@string/title_Prefrences"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Horizontal Line under the top section -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <!-- RelativeLayout for Coffee Image and Background -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="0dp">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImageView"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/wallpaper"
+            android:scaleType="centerCrop"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <!-- Coffee Image (Centered vertically and horizontally) -->
+        <ImageView
+            android:id="@+id/coffeeImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp" />
+
+        <!-- Controls Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_below="@id/backgroundImageView"
+            android:layout_marginTop="15dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp">
+
+            <!-- Row for Coffee Name and Controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Coffee Name on the Left -->
+                <TextView
+                    android:id="@+id/coffeeNameTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="22dp"
+                    android:textColor="@color/darkBrown"
+                    android:textStyle="bold" />
+
+                <!-- Controls (Minus, Count, Plus) on the Right -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical"
+                    android:layout_marginTop="3dp">
+
+                    <!-- Minus Button -->
+                    <ImageView
+                        android:id="@+id/minusButton"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/minus"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:onClick="onMinusClick" />
+
+                    <!-- Count Value Text -->
+                    <TextView
+                        android:id="@+id/countTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/title_count"
+                        android:textSize="22sp"
+                        android:textColor="@color/darkBrown"
+                        android:textStyle="bold" />
+
+                    <!-- Plus Button -->
+                    <ImageView
+                        android:id="@+id/plusButton"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/plus"
+                        android:clickable="true"
+                        android:onClick="onPlusClick" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Coffee Price TextView (Below Name and Controls) -->
+            <TextView
+                android:id="@+id/coffeePriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/lightBrown"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Horizontal Line after RelativeLayout -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="-30dp" />
+
+    <!-- Size Selection Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <!-- Coffee Size Text -->
+        <TextView
+            android:id="@+id/sizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_Size"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/smallSizeIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/small_light"
+            android:layout_marginStart="70dp"
+            android:clickable="true"
+            android:onClick="onSizeClick" />
+
+        <ImageView
+            android:id="@+id/mediumSizeIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/medium_light"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            android:onClick="onSizeClick" />
+
+        <ImageView
+            android:id="@+id/largeSizeIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/large_light"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            android:onClick="onSizeClick" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Line after Size Selection -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="0dp" />
+
+    <!-- Sugar Selection Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+
+        <!-- Coffee Sugar Text -->
+        <TextView
+            android:id="@+id/sugarTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_Sugar"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:textStyle="bold" />
+
+        <!-- No Sugar Icon -->
+        <ImageView
+            android:id="@+id/noSugarIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nosugar_light"
+            android:layout_marginStart="60dp"
+            android:clickable="true"
+            android:onClick="onSugarOptionClick" />
+
+        <!-- With Sugar Icon -->
+        <ImageView
+            android:id="@+id/sugarIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sugar_light"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            android:onClick="onSugarOptionClick" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Line after Size Selection -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="0dp" />
+
+    <!-- Additions Selection Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <!-- Coffee Additions Text -->
+        <TextView
+            android:id="@+id/additionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_Additions"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:textStyle="bold" />
+
+        <!-- Cream Icon -->
+        <ImageView
+            android:id="@+id/creamIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/cream_light"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:onClick="onAdditionOptionClick" />
+
+        <!-- Vanilla Icon -->
+        <ImageView
+            android:id="@+id/vanillaIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/vanilla_light"
+            android:layout_marginStart="30dp"
+            android:clickable="true"
+            android:onClick="onAdditionOptionClick" />
+
+    </LinearLayout>
+
+    <!-- Horizontal Line after Additions Selection -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey"
+        android:layout_marginTop="0dp" />
+
+        <!-- Total Layout (Left label and Right value) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <!-- Total Label on the Left -->
+            <TextView
+                android:id="@+id/totalLabelTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:text="@string/title_Total"
+                android:textSize="22sp"
+                android:textColor="@color/mustard"
+                android:textStyle="bold" />
+
+            <!-- Right-aligned Total Value and Currency -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical">
+
+                <TextView
+                    android:id="@+id/totalValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/darkBrown"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    <!-- Place Order Button -->
+    <Button
+        android:id="@+id/placeOrderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-10dp"
+        android:padding="10dp"
+        android:text="@string/title_Placeorder"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/mustard"
+        android:fontFamily="@font/raleway_bold" />
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/mustard"/> <!-- Color of the circular background -->
+    <corners android:radius="60dp"/> <!-- Radius to make it a circle -->
+</shape>

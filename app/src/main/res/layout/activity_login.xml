@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top section with Back arrow and Heading -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+        <!-- Back Arrow Image -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/title_Back"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="7dp"
+            android:onClick="onBackArrowClick" />
+
+        <!-- Centered Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="-10dp"
+            android:text="@string/login"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Horizontal Line under the top section -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightGrey" />
+
+    <!-- Centered Content Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:text="@string/welcome"
+        android:gravity="center_horizontal"
+        android:textColor="@color/mustard"
+        android:textSize="25sp"
+        android:fontFamily="@font/raleway_bold"/>
+
+    <!-- Email Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/hint_Email"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/mustard"
+        app:hintTextColor="@color/black"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSignInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:hintTextColor="@color/black"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textColorHint="@color/darkGrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/hint_Password"
+        android:gravity="center_horizontal"
+        android:textColorHint="@color/grey"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundMode="filled"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/mustard"
+        app:hintTextColor="@color/black"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSignInPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/darkGrey"
+            android:textCursorDrawable="@drawable/cursor_color"
+            app:hintTextColor="@color/black"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="-10dp"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/mustard"
+        android:fontFamily="@font/raleway_bold"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dont"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/title_signup"
+            android:textStyle="bold"
+            android:textColor="@color/mustard"
+            android:textSize="14sp" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

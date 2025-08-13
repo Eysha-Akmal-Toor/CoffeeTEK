@@ -1,0 +1,22 @@
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#FFFFFF">
+
+    <Button
+        android:id="@+id/button_show_custom_list"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#808080"
+        android:padding="10dp"
+        android:text="@string/title_CustomList"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

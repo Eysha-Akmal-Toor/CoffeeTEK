@@ -1,0 +1,326 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Top Section with Heading (No Back Arrow) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:gravity="center_vertical">
+
+        <!-- Centered Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Home"
+            android:textSize="20sp"
+            android:textColor="@color/lightBrown"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Horizontal Line under the Top Section -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white" />
+
+    <!-- Background Image and Image with Text on the same Line -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <!-- Background Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/wallpaper"
+            android:scaleType="centerCrop"/>
+
+        <!-- Image with Text (Centered) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_centerInParent="true">
+
+            <!-- Image on the Left -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/coffee_bean"/>
+
+            <!-- Text Next to the Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Organic"
+                android:textColor="@color/darkBrown"
+                android:fontFamily="@font/raleway_bold"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-20dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- 2nd Text Next to the Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Notes"
+            android:textColor="@color/darkBrown"
+            android:textSize="12sp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="95dp"
+            android:gravity="center_vertical"/>
+
+        <!-- 3rd Text Next to the Image -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rich and full-bodied."
+            android:textColor="@color/darkBrown"
+            android:textSize="12sp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="115dp"
+            android:gravity="center_vertical"/>
+    </RelativeLayout>
+
+    <!-- New Text "Choose & Enjoy" in bold and centered -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Choose"
+        android:textColor="@color/darkBrown"
+        android:fontFamily="@font/raleway_bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="25dp"/>
+
+    <!-- New Text "Boost your day with our best products" in smaller font -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Boost"
+        android:textColor="@color/darkBrown"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Section for Two Images with Text Under Them -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="20dp">
+
+        <!-- First Image and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_radius"
+            android:padding="20dp">
+
+            <!-- Image -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/espresso"/>
+
+            <!-- Text Under the Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/HotCoffee"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/darkBrown"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_bold"/>
+        </LinearLayout>
+
+        <!-- Second Image and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/border_radius"
+            android:padding="20dp">
+
+            <!-- Image -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/latte"/>
+
+            <!-- Text Under the Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ColdCoffee"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/darkBrown"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Section for Two More Images with Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="15dp">
+
+        <!-- Third Block with Image and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:paddingLeft="35dp"
+            android:paddingTop="20dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/border_radius">
+
+            <!-- Image -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/donut"/>
+
+            <!-- Text Under the Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Donut"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/darkBrown"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_bold"/>
+        </LinearLayout>
+
+        <!-- Fourth Block with Image and Text -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:paddingLeft="35dp"
+            android:paddingTop="20dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/border_radius">
+
+            <!-- Image -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cookie"/>
+
+            <!-- Text Under the Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Cookie"
+                android:layout_marginTop="15dp"
+                android:textSize="14sp"
+                android:textColor="@color/darkBrown"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/custom_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Horizontal Line above the Bottom Menu Bar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightGrey" />
+
+    <!-- Cursor View to Move Along with Selected Icon -->
+    <View
+        android:id="@+id/cursor"
+        android:layout_width="100dp"
+        android:layout_height="4dp"
+        android:background="@color/darkBrown" />
+
+    <!-- Bottom Menu Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <!-- First Icon -->
+        <ImageView
+            android:id="@+id/menu_icon1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center" />
+
+        <!-- Second Icon -->
+        <ImageView
+            android:id="@+id/menu_icon2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/coffee_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center" />
+
+        <!-- Third Icon -->
+        <ImageView
+            android:id="@+id/menu_icon3"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/location_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center" />
+
+        <!-- Fourth Icon -->
+        <ImageView
+            android:id="@+id/menu_icon4"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/user_light"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>
